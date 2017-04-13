@@ -93,7 +93,7 @@
 <meta property="og:url" content="http://kykira.github.io/2017/03/24/java学习(一)/index.html">
 <meta property="og:site_name" content="KYLAN">
 <meta property="og:description" content="看到那个”一”了没，这是一个大坑。">
-<meta property="og:updated_time" content="2017-04-13T13:02:12.732Z">
+<meta property="og:updated_time" content="2017-04-13T13:25:22.039Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java学习记录一:基本语法">
 <meta name="twitter:description" content="看到那个”一”了没，这是一个大坑。">
@@ -409,7 +409,7 @@
 <a id="more"></a>
 <h4 id="本文提纲"><a href="#本文提纲" class="headerlink" title="本文提纲"></a>本文提纲</h4><p>一、基本语法和标识符</p>
 <p>二、数据类型和运算符</p>
-<p>三、流程控制和数组</p>
+<p>三、流程的控制和数组</p>
 <p>四、输入输出类的使用</p>
 <h3 id="一、基本语法和标识符"><a href="#一、基本语法和标识符" class="headerlink" title="一、基本语法和标识符"></a>一、基本语法和标识符</h3><hr>
 <p>在java语言的基本语法中，有以下几点是需要注意的</p>
@@ -511,9 +511,8 @@
 </table>
 <p>看看就好</p>
 <h3 id="二、数据类型和运算符"><a href="#二、数据类型和运算符" class="headerlink" title="二、数据类型和运算符"></a>二、数据类型和运算符</h3><hr>
+<p><strong>1.数据类型</strong></p>
 <p>Java支持8种基本数据类型，基本数据类型不支持面向对象的编程机制，也就不具备“对象”的特性：没有属性和方法可以调用。由于Java是面向对象的编程语言，所以Java提供了基本数据类型的包装类，包装类自然提供了各种方便的方法，而在进行简单、有效的常规数据处理中，用这8种基本数据类型足够了。包装类的使用会在下一章的类和对象中有所提及（大概）。</p>
-<p><strong>下面是声明变量的语法：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">type varName;</div><div class="line">\\类型 变量名</div></pre></td></tr></table></figure>
 <p><strong>基本数据类型和包装类的对应：</strong></p>
 <table>
 <thead>
@@ -557,27 +556,131 @@
 </tr>
 </tbody>
 </table>
-<hr>
 <p><strong>下面是声明变量的语法：</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//例如</span></div><div class="line">type varName;</div><div class="line"><span class="comment">//类型 变量名</span></div><div class="line"><span class="keyword">int</span> number;<span class="comment">//声明不赋值</span></div><div class="line"><span class="keyword">double</span> d = <span class="number">3.14</span>;<span class="comment">//声明的同时赋值</span></div><div class="line"><span class="keyword">char</span> c = <span class="string">'a'</span>;</div><div class="line">String name = <span class="string">"空月"</span>;<span class="comment">//字符串对象</span></div></pre></td></tr></table></figure>
 <hr>
 <p><strong>2.运算符</strong></p>
 <p>java支持的运算符可以分为以下几种</p>
 <ul>
-<li>算术运算符</li>
-<li>赋值运算符</li>
-<li>比较运算符</li>
-<li>逻辑运算符</li>
-<li>位运算符</li>
-<li>类型相关运算符</li>
+<li><strong>算术运算符</strong></li>
+<li><strong>赋值运算符</strong></li>
+<li><strong>比较运算符</strong></li>
+<li><strong>逻辑运算符</strong></li>
+<li><strong>位运算符</strong></li>
+<li><strong>类型相关运算符</strong></li>
 </ul>
-<p><strong>全列出来，一看就懂了：</strong><br>算术运算符||||<br>—|—|—|—<br>+|-|<em>|/<br>%|++|–|<br><strong>赋值运算符</strong>|||<br>=|+=|-=|</em>=<br>/=|%=|&lt;&lt;=|&gt;&gt;=<br>&amp;=|^=||=<br><strong>比较运算符</strong>|||<br>== | !=|&gt;|&lt;</p>
-<blockquote>
-<p>=|&lt;=||<br><strong>逻辑运算符</strong>|||<br>&amp;&amp;||||!|<br><strong>位运算符</strong>|||<br>&amp;|| |^ | ~<br>&lt;&lt;|&gt;&gt;|&gt;&gt;&gt;||<br><strong>三目运算符</strong>|||<br>?:|||</p>
-</blockquote>
+<p><strong>全列出来，一看就懂了：</strong></p>
+<table>
+<thead>
+<tr>
+<th>算术运算符</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>-</td>
+<td>*</td>
+<td>/</td>
+</tr>
+<tr>
+<td>%</td>
+<td>++</td>
+<td>–</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>赋值运算符</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>=</td>
+<td>+=</td>
+<td>-=</td>
+<td>*=</td>
+</tr>
+<tr>
+<td>/=</td>
+<td>%=</td>
+<td>&lt;&lt;=</td>
+<td>&gt;&gt;=</td>
+</tr>
+<tr>
+<td>&amp;=</td>
+<td>^=</td>
+<td>\</td>
+<td>=</td>
+</tr>
+<tr>
+<td><strong>比较运算符</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>==</td>
+<td>!=</td>
+<td>&gt;</td>
+<td>&lt;</td>
+</tr>
+<tr>
+<td>>=</td>
+<td>\&lt;=</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>逻辑运算符</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&amp;&amp;</td>
+<td>&#124;&#124;</td>
+<td>!</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>位运算符</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>&#124;</td>
+<td>^</td>
+<td>~</td>
+</tr>
+<tr>
+<td>&lt;&lt;</td>
+<td>&gt;&gt;</td>
+<td>&gt;&gt;&gt;</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>三目运算符</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?  :</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p><strong>例</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">public class Test &#123;</div><div class="line"></div><div class="line">   public static void main(String args[]) &#123;</div><div class="line">      int a, b;</div><div class="line">      a = 10;</div><div class="line">      b = (a == 1) ? 20: 30;</div><div class="line">      //variable x = (expression) ? value if true : value if false</div><div class="line">      System.out.println( &quot;Value of b is : &quot; +  b );</div><div class="line">      //输出 Value of b is : 30</div><div class="line">      b = (a != 1) ? 20: 30;</div><div class="line">      //variable x = (expression) ? value if true : value if false</div><div class="line">      System.out.println( &quot;Value of b is : &quot; +  b );</div><div class="line">      //输出 Value of b is : 20</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="三、流程控制和数组"><a href="#三、流程控制和数组" class="headerlink" title="三、流程控制和数组"></a>三、流程控制和数组</h3><hr>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</div><div class="line">      <span class="keyword">int</span> a, b;</div><div class="line">      a = <span class="number">10</span>;</div><div class="line">      b = (a == <span class="number">1</span>) ? <span class="number">20</span>: <span class="number">30</span>;</div><div class="line">      <span class="comment">//variable x = (expression) ? value if true : value if false</span></div><div class="line">      System.out.println( <span class="string">"Value of b is : "</span> +  b );</div><div class="line">      <span class="comment">//输出 Value of b is : 30</span></div><div class="line">      b = (a != <span class="number">1</span>) ? <span class="number">20</span>: <span class="number">30</span>;</div><div class="line">      <span class="comment">//variable x = (expression) ? value if true : value if false</span></div><div class="line">      System.out.println( <span class="string">"Value of b is : "</span> +  b );</div><div class="line">      <span class="comment">//输出 Value of b is : 20</span></div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="三、流程的控制和数组"><a href="#三、流程的控制和数组" class="headerlink" title="三、流程的控制和数组"></a>三、流程的控制和数组</h3><hr>
 <p>流程控制就是控制代码段的执行顺序，最基本的是顺序结构，使程序的代码总是从上到下一行一行地执行，几乎所有的编程语言都在在这个基础上，提供了两种流程控制结构：分支结构和循环结构。分支结构根据条件来选择性地执行某段代码，循环结构根据循环条件重复执行某段代码。</p>
 <p>JAVA提供了<strong>if</strong>和<strong>switch</strong>两种分支结构；<strong>while</strong>、<strong>do while</strong>、<strong>for</strong>和<strong>foreach</strong>四种循环语句，并提供了 <strong>break</strong> 和 <strong>continue</strong> 来控制程序的循环结构。</p>
 <p><strong>分支结构例子：</strong></p>
@@ -810,7 +913,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#本文提纲"><span class="nav-number">1.</span> <span class="nav-text">本文提纲</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一、基本语法和标识符"><span class="nav-number"></span> <span class="nav-text">一、基本语法和标识符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、数据类型和运算符"><span class="nav-number"></span> <span class="nav-text">二、数据类型和运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、流程控制和数组"><span class="nav-number"></span> <span class="nav-text">三、流程控制和数组</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#本文提纲"><span class="nav-number">1.</span> <span class="nav-text">本文提纲</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一、基本语法和标识符"><span class="nav-number"></span> <span class="nav-text">一、基本语法和标识符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、数据类型和运算符"><span class="nav-number"></span> <span class="nav-text">二、数据类型和运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、流程的控制和数组"><span class="nav-number"></span> <span class="nav-text">三、流程的控制和数组</span></a></div>
             
 
           </div>
