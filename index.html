@@ -229,24 +229,7 @@
 </nav>
 
 
-
-
-<script>
-    
-    window.onload = function(){
-        var path = 'https://kykira.github.io/'; //这里要改成你博客的地址
-        var localhostItem = String(window.location).split(path)[1];
-        var LiNode = document.querySelectorAll('#menu > li > a')
-        
-        for(var i = 0; i< LiNode.length;i++){
-            var item = String(LiNode[i].href).split(path)[1];
-            if(item == localhostItem && item != undefined){
-                LiNode[i].setAttribute('style','border-bottom:1px solid black');
-            }
-        }
-    };
-
-</script> </div>
+ </div>
     </header>
 
     <main id="main" class="main">
@@ -521,14 +504,13 @@
       <div class="footer-inner">
         <div class="copyright">&copy; 2018 - <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-heart" style="color: #E16B8C"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">空月</span>
   
   <!-- 博客字数统计 -->
     <span class="site-pv">
-     | 
-      <i class="fa fa-pencil"></i>
+     |<i class="fa fa-pencil"></i>
          站点总字数： <span class="post-count"></span>
     </span>
 
@@ -549,12 +531,6 @@
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <span class="site-pv">
       已有 <span class="busuanzi-value" id="busuanzi_value_site_pv"></span> 次访问 w
-    </span>
-    <!-- 博客字数统计 -->
-    <span class="site-pv">
-     | 
-      <i class="fa fa-pencil"></i>
-         站点总字数： <span class="post-count"></span>
     </span>
 </div>
 <!-- 新增访客统计代码 END-->
